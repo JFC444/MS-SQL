@@ -15,11 +15,11 @@ $bruttoGesamtpreis = $nettoGesamtpreis + $mwstBetrag
 
 # Ausgabe
 Write-Output "Produkt: $produktname"
-Write-Output "Stückpreis: $stückpreis €"
+Write-Output "Stückpreis: $($stückpreis.ToString("F2")) €"
 Write-Output "Anzahl: $anzahl"
-Write-Output "Nettopreis: $nettoGesamtpreis €"
-Write-Output "Mehrwertsteuer (19%): $mwstBetrag €"
-Write-Output "Gesamtpreis (brutto): $bruttoGesamtpreis €"
+Write-Output "Nettopreis: $($nettoGesamtpreis.ToString("F2")) €"
+Write-Output "Mehrwertsteuer (19%): $($mwstBetrag.ToString("F2")) €"
+Write-Output "Gesamtpreis (brutto): $($bruttoGesamtpreis.ToString("F2")) €"
 
 # Zwei Beispielzahlen
 $a = 15
@@ -27,7 +27,7 @@ $b = 4
 
 # Addition
 $summe = $a + $b
-Write-Output "Addition: $a + $b = $summe"
+Write-Output "`nAddition: $a + $b = $summe"
 
 # Subtraktion
 $differenz = $a - $b
@@ -43,4 +43,4 @@ Write-Output "Division: $a / $b = $quotient"
 
 # Modulo (Rest bei Division)
 $rest = $a % $b
-Write-Output "Modulo: $a % $b = $rest"
+Write-Output "Modulo: $a % $b = $rest" 
